@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  phase = 'Minha cor favorita é:';
+  favoriteColor = 'Azul';
+  title = 'Seja bem vindx!'
   constructor(){
   }
 }
