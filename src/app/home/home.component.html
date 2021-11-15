@@ -1,1 +1,15 @@
-<h2>Home da Aplicação</h2>
+<h2> Palavra: {{word}} {{color}}</h2>
+
+<input type="text" [value]="initialValue">
+<br>
+
+<button [disabled]="isDisabled">Clique em mim!</button>
+<br>
+
+<p [attr.aria-label]="isDisabled ? 'Botão desabilitado' : accessibilityText">
+  Lorem ipsum dolor sit amet, consect Lorem ipsum dolor sit
+</p>
+
+<br>
+
+<img [src]=" imageURL ">
