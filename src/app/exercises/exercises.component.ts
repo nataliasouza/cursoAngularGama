@@ -15,6 +15,7 @@ export class ExercisesComponent implements OnInit {
   initialValue ='Valor Inicial';
   isDisabled = true;
   accessibilityText ='Um texto acessível';
+  valorDoInput = ' ';
 
   constructor() {
     setTimeout(() =>{
@@ -29,6 +30,11 @@ export class ExercisesComponent implements OnInit {
   }
 
   digitouAlgo($event: any) {
-    console.log($event);
+    this.valorDoInput = $event.target.value;
+    console.log($event)
+  }
+
+  passouMouseAqui(){
+    console.log('Você passou o mouse');
   }
 }
