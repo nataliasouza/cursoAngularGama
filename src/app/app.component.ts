@@ -11,4 +11,7 @@ export class AppComponent {
   title = 'Seja bem vindx! '
   constructor(){
   }
+  eventoRecebido($event: any){
+    console.log('AppComponent: Evento Recebido!!!', $event);
+  }
 }

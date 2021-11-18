@@ -1,12 +1,23 @@
 <h1>Exemplos de Event Binding: </h1>
-<input type="text" [value]="valorDoInput" (keyup)="digitouAlgo($event)">
+<input type="text"
+    [value]="valorDoInput"
+    (keyup)="digitouAlgo($event)">
 <br>
-<button (click)="onClick($event)" (mouseenter)="passouMouseAqui()">Clique em mim</button>
+<br>
+<button (click)="onClickBotaoEmissor($event)">
+  Emitir informação de clique
+</button>
+<br>
+<br>
+<button (click)="onClick($event)"
+    (mouseenter)="passouMouseAqui()">
+    Clique em mim
+</button>
   Valor Do Input : {{valorDoInput}}
 <br>
 
 <h1>Exemplos de Property Binding: </h1>
-<h2> Palavra: {{word}} {{color}}</h2>
+<p> Palavra: {{word}} {{color}}</p>
 
 <input type="text" [value]="initialValue">
 <br>

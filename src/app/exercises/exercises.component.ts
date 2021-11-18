@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-exercises',
@@ -9,6 +9,7 @@ export class ExercisesComponent implements OnInit {
 
   @Input() word: string | undefined;
   @Input() color: string | undefined;
+  @Output() clicado = new EventEmitter();
 
   //imageURL : string = 'http://lorempixel.com/400/200/';
   imageURL = '../assets/telaMeusInvestimentos.jpg';
@@ -36,5 +37,9 @@ export class ExercisesComponent implements OnInit {
 
   passouMouseAqui(){
     console.log('Você passou o mouse');
+  }
+  onClickBotaoEmissor($event: any){
+    console.log('Devo emitir informações para o componente pai.');
+    this.clicado.emit($event);
   }
 }
