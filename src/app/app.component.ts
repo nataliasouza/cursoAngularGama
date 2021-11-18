@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   phase = 'Minha cor favorita é:';
   favoriteColor = 'Azul';
-  title = 'Seja bem vindx!'
+  title = 'Seja bem vindx! '
   constructor(){
+  }
+  eventoRecebido($event: any){
+    console.log('AppComponent: Evento Recebido!!!', $event);
   }
 }
